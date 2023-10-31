@@ -18,7 +18,7 @@ public class AddressService implements IAddressService {
 
     @Override
     public Optional<Address> findById(Long id) {
-        return Optional.empty();
+        return iAddressRepository.findById(id);
     }
 
     @Override
