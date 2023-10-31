@@ -42,4 +42,15 @@ public class ImageController {
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<Image> updateImage(@PathVariable Long id, @RequestBody Image image) {
+        Optional<Image> imageOptional = imageService.findById(id);
+        if (!imageOptional.isPresent()) {
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        }
+        image.setId(id);
+        imageService.save(image);
+        return new ResponseEntity<>(HttpStatus.OK);
+    }
+
 }
