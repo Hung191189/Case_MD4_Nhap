@@ -36,4 +36,10 @@ public class ImageController {
         return new ResponseEntity<>(imageOptional.get(), HttpStatus.OK);
     }
 
+    @PostMapping("")
+    public ResponseEntity<Image> saveImage(@RequestBody Image image) {
+        imageService.save(image);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+
 }
