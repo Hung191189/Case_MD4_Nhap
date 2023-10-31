@@ -1,7 +1,7 @@
 package com.example.case_md4_nhap.service.impl;
 
-import com.example.case_md4.model.Role;
-import com.example.case_md4.service.IRoleService;
+import com.example.case_md4_nhap.model.Role;
+import com.example.case_md4_nhap.service.IRoleService;
 
 import java.util.Optional;
 
