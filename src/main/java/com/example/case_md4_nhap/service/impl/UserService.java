@@ -1,8 +1,8 @@
 package com.example.case_md4_nhap.service.impl;
 
-import com.example.case_md4.model.User;
-import com.example.case_md4.repository.IUserRepository;
-import com.example.case_md4.service.IGeneralService;
+import com.example.case_md4_nhap.model.User;
+import com.example.case_md4_nhap.repository.IUserRepository;
+import com.example.case_md4_nhap.service.IGeneralService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
