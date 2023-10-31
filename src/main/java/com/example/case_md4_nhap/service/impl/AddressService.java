@@ -23,7 +23,7 @@ public class AddressService implements IAddressService {
 
     @Override
     public Address save(Address address) {
-        return null;
+        return iAddressRepository.save(address);
     }
 
     @Override
