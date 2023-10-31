@@ -28,6 +28,6 @@ public class AddressService implements IAddressService {
 
     @Override
     public void delete(Long id) {
-
+        iAddressRepository.deleteById(id);
     }
 }
