@@ -1,7 +1,27 @@
 package com.example.case_md4_nhap.service;
 
-import com.example.case_md4.model.User;
+import com.example.case_md4_nhap.model.User;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UserDetailsService;
 
-public interface IUserService extends IGeneralService<User>{
+import java.util.Optional;
 
+public interface IUserService extends UserDetailsService {
+    void save(User user);
+
+    Iterable<User> findAll();
+
+    User findByUsername(String username);
+
+    User getCurrentUser();
+
+    Optional<User> findById(Long id);
+
+    UserDetails loadUserById(Long id);
+
+    boolean checkLogin(User user);
+
+    boolean isRegister(User user);
+
+    boolean isCorrectConfirmPassword(User user);
 }

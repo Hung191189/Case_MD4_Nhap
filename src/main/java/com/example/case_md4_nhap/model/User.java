@@ -29,5 +29,13 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "id_role"))
     @ManyToMany(fetch = FetchType.LAZY)
     private Set<Role> advertisementSet = new HashSet<>();
-
+    @Column(nullable = false)
+    private String confirmPassword;
+    private boolean enabled = true;
+    public String getConfirmPassword() {
+        return confirmPassword;
+    }
+    public boolean isEnabled() {
+        return enabled;
+    }
 }
