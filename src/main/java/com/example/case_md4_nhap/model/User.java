@@ -38,4 +38,12 @@ public class User {
     public boolean isEnabled() {
         return enabled;
     }
+    public Set<Role> getRoles() {
+        return advertisementSet;
+    }
+
+
+    public void setRoles(Set<Role> roles) {
+        this.advertisementSet = roles;
+    }
 }
